@@ -1,0 +1,40 @@
+.container {
+    background-color: #fef68a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    min-height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    white-space: pre-wrap;
+    color: rgb(50, 42, 45);
+}
+
+.title {
+    float: left;
+    background-color: rgb(72, 83, 110);
+    color: white;
+    width: fit-content;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.container p {
+    margin: 10px 0;
+}
+
+.header {
+    width: 100%;
+}
+
+.icons {
+    float: right;
+}
+
+.icon {
+    margin-right: 30px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
