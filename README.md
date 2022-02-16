@@ -39,8 +39,13 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### [Video Link](https://drive.google.com/file/d/1DOO3hAJczX_K_jkUfuVUwzbfP6ocnd7O/view?usp=sharing)
 
+
 ## Set it up locally
 
  - Clone this repository into your local system
  - On your CLI run `npm install` to install all the necessary dependencies
  - run `npm start` to start the app on [http://localhost:3000](http://localhost:3000)
+
+## high level architecture
+
+![HLA](https://github.com/rajsahu213/planning-tool/files/8081380/HLA.pdf)
