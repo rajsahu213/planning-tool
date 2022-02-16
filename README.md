@@ -33,7 +33,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## [Live Link](https://620d0ce6dafcd200088cbd58--keen-leavitt-ef95c0.netlify.app/)
+## Deployment
+
+### [Live Link](https://620d0ce6dafcd200088cbd58--keen-leavitt-ef95c0.netlify.app/)
 
 ## Set it up locally
 
