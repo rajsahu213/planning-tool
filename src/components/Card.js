@@ -5,6 +5,7 @@ import { MdOutlineDelete } from "react-icons/md";
 
 const Card = (props) => {
     const { data } = props;
+    const { provided, innerRef } = props;
 
     let title = "";
     if (data.title) {
@@ -13,23 +14,32 @@ const Card = (props) => {
 
     return (
         <div
-            className={styles.container}
-            style={{ backgroundColor: data.color }}
             id={data.id}
+            {...provided.draggableProps}
+            {...provided.dragHandleProps}
+            ref={innerRef}
         >
-            <div className={styles.header}>
-                {title}
-                <div className={styles.icons}>
-                    <ImPencil
-                        className={styles.icon}
-                        onClick={() => props.onEdit(data.id)}
-                    />
-                    <MdOutlineDelete className={styles.icon} />
+            <div
+                style={{ backgroundColor: data.color }}
+                className={styles.container}
+            >
+                <div className={styles.header}>
+                    {title}
+                    <div className={styles.icons}>
+                        <ImPencil
+                            className={styles.icon}
+                            onClick={() => props.onEdit(data.id)}
+                        />
+                        <MdOutlineDelete
+                            className={styles.icon}
+                            onClick={() => props.onDelete(data.id)}
+                        />
+                    </div>
                 </div>
-            </div>
 
-            <p>{data.text}</p>
-            <p> - {data.name}</p>
+                <p>{data.text}</p>
+                <p> - {data.name}</p>
+            </div>
         </div>
     );
 };

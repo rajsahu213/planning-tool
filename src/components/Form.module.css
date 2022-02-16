@@ -3,7 +3,7 @@
     top: 50% !important;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(247, 205, 205);
+    background-color: rgb(177, 221, 241);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -13,7 +13,7 @@
     max-width: 550px;
     border-radius: 12px;
     padding: 30px;
-    border: 1px solid rgb(247, 247, 247);
+    z-index: 0;
 }
 
 .form-container input {
@@ -41,7 +41,7 @@
 .buttonContainer button {
     width: 90px;
     height: 35px;
-    background-color: whitesmoke;
+    background-color: white;
     border: none;
     border-radius: 6px;
     font-size: 16px;
@@ -51,5 +51,5 @@
 .form-container input:focus,
 textarea:focus {
     outline: none;
-    border: 1.5px solid black;
+    border: 1.5px solid rgb(2, 5, 49);
 }

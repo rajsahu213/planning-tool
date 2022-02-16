@@ -4,12 +4,27 @@
     position: fixed;
     left: 80%;
     top: 5%;
-    width: 120px;
     border: none;
-    border-radius: 12px;
-    font-size: 20px;
-    padding: 7px;
+    border-radius: 4px;
+    font-size: 30px;
+    padding: 5px 15px;
+    padding-bottom: 0;
     cursor: pointer;
+}
+
+.create-new-group {
+    background-color: black;
+    color: whitesmoke;
+    position: fixed;
+    left: 80%;
+    top: 5%;
+    border: none;
+    border-radius: 100%;
+    padding: 10px 15px;
+    padding-bottom: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 50px;
 }
 
 .white-board {
