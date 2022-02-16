@@ -46,6 +46,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
  - On your CLI run `npm install` to install all the necessary dependencies
  - run `npm start` to start the app on [http://localhost:3000](http://localhost:3000)
 
+
 ## high level architecture
 
-![HLA](https://github.com/rajsahu213/planning-tool/files/8081380/HLA.pdf)
+![HLA](https://user-images.githubusercontent.com/59685883/154307669-cabb6f8b-57cb-4a04-a038-e772febb5d2c.jpeg)
