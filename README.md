@@ -37,7 +37,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### [Live Link](https://620f9cab027b95000780fe9c--keen-leavitt-ef95c0.netlify.app/)
 
-### [Video Link](https://drive.google.com/file/d/1DOO3hAJczX_K_jkUfuVUwzbfP6ocnd7O/view?usp=sharing)
+### [Video Link - Part 1](https://drive.google.com/file/d/1DOO3hAJczX_K_jkUfuVUwzbfP6ocnd7O/view?usp=sharing)
+
+### [Video Link - Part 2](https://drive.google.com/file/d/1gvztsCZ8S0OoVTdkIstsFiKKr0-HP5E9/view?usp=sharing)
 
 
 ## Set it up locally
