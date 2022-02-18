@@ -2,7 +2,15 @@ import React from "react";
 import styles from "./Form.module.css";
 
 const Form = (props) => {
-    const [formData, setFormData] = React.useState(props.formData);
+    const initFormData = props.data
+        ? props.data
+        : {
+              name: "",
+              group: "",
+              text: "",
+          };
+
+    const [formData, setFormData] = React.useState(initFormData);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -16,7 +24,7 @@ const Form = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.getFormData(formData);
+        props.onFormDataSubmit(formData);
         handleCancel(event);
     };
 
@@ -27,7 +35,7 @@ const Form = (props) => {
 
     return (
         <form className={styles["form-container"]} onSubmit={handleSubmit}>
-            <h3>{props.type}</h3>
+            <h3>New Highlight</h3>
             <input
                 type="text"
                 placeholder="Name"
@@ -37,9 +45,9 @@ const Form = (props) => {
             />
             <input
                 type="text"
-                placeholder="Title"
-                value={formData.title}
-                name="title"
+                placeholder="Group"
+                value={formData.group}
+                name="group"
                 onChange={handleChange}
             />
             <textarea
@@ -49,7 +57,7 @@ const Form = (props) => {
                 onChange={handleChange}
             />
             <div className={styles.buttonContainer}>
-                <button>Save</button>
+                <button>Add</button>
                 <button onClick={handleCancel}>Cancel</button>
             </div>
         </form>

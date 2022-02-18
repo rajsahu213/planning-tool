@@ -1,0 +1,24 @@
+.container {
+    background-color: lightgray;
+    padding: 2rem;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name {
+    background-color: whitesmoke;
+    border: 1px solid black;
+    width: 200px;
+    text-align: center;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}

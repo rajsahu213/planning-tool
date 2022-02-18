@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.createNew {
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    margin: 20px 0px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+}
