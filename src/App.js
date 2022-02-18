@@ -5,7 +5,9 @@ import AddNewNote from "./components/AddNewNote";
 import Main from "./components/Main/Main";
 import GroupHighlights from "./components/GroupHighlights/GroupHighlights";
 import { DragDropContext } from "react-beautiful-dnd";
+import { SelectableGroup } from "react-selectable";
 import { nanoid } from "nanoid";
+import AddNewGroup from "./components/AddNewGroup/AddNewGroup";
 
 const colors = [
     "teal",
@@ -22,7 +24,9 @@ const getRandomColor = () => colors[Math.floor(Math.random() * colors.length)];
 const App = () => {
     const [notes, setNotes] = useState(() => Data);
     const [isNewNote, setIsNewNote] = useState(false);
+    const [isNewGroup, setIsNewGroup] = useState(false);
     const [isGroupHighlight, setIsGroupHighlight] = useState(false);
+    const [selectedKeys, setSelectedKeys] = useState([]);
 
     useEffect(() => {
         const savedNotes = JSON.parse(
@@ -69,12 +73,22 @@ const App = () => {
         );
     };
 
+    const handleSelection = (keys) => {
+        setSelectedKeys(keys);
+    };
+
     let stage = (
-        <Main
-            notes={notes}
-            onDelete={handleDelete}
-            onEdit={handleEditNoteClick}
-        />
+        <SelectableGroup
+            onSelection={handleSelection}
+            onEndSelection={() => setIsNewGroup(true)}
+        >
+            <Main
+                notes={notes}
+                onDelete={handleDelete}
+                onEdit={handleEditNoteClick}
+                selectedKeys={selectedKeys}
+            />
+        </SelectableGroup>
     );
 
     if (isGroupHighlight) {
@@ -108,12 +122,31 @@ const App = () => {
         }
     };
 
+    const handleNewGroupSubmit = (groupName) => {
+        setNotes((prevNotes) =>
+            prevNotes.map((prevNote) => {
+                let note = prevNote;
+                if (selectedKeys.indexOf(prevNote.id) > -1) {
+                    note.group = groupName;
+                }
+                return note;
+            })
+        );
+        setIsNewGroup(false);
+    };
+
     return (
         <DragDropContext onDragEnd={handleOnDragEnd}>
             <Header
                 onNewNoteClick={handleNewNoteClick}
                 onGroupHighlightClick={handleGroupHighlightClick}
             />
+            {isNewGroup && (
+                <AddNewGroup
+                    onCancel={() => setIsNewGroup(false)}
+                    onSubmit={handleNewGroupSubmit}
+                />
+            )}
             {isNewNote && (
                 <AddNewNote
                     onCancel={handleNewNoteClick}

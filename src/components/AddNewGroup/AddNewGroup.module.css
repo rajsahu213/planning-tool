@@ -1,0 +1,48 @@
+.newGroup {
+    position: fixed;
+    top: 50% !important;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d1d1fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+    width: 60%;
+    max-width: 550px;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.newGroup input {
+    width: 100%;
+    margin: 20px;
+    height: 40px;
+    padding: 10px 10px;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonContainer button {
+    width: 90px;
+    height: 35px;
+    background-color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.newGroup input:focus {
+    outline: none;
+    border: 1.5px solid rgb(206, 208, 243);
+}

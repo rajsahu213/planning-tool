@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Draggable } from "react-beautiful-dnd";
 import Card from "../Card/Card";
 import styles from "./Group.module.css";
