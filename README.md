@@ -35,7 +35,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Deployment
 
-### [Live Link](https://620d0ce6dafcd200088cbd58--keen-leavitt-ef95c0.netlify.app/)
+### [Live Link](https://620f90c72fb003000736347d--keen-leavitt-ef95c0.netlify.app/)
 
 ### [Video Link](https://drive.google.com/file/d/1DOO3hAJczX_K_jkUfuVUwzbfP6ocnd7O/view?usp=sharing)
 
