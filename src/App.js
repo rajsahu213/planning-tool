@@ -41,6 +41,7 @@ const App = () => {
 
     useEffect(() => {
         localStorage.setItem("react-notes-app-data", JSON.stringify(notes));
+        setOk(true);
     }, [notes]);
 
     const handleNewNoteClick = () => {
