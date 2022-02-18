@@ -27,6 +27,7 @@ const App = () => {
     const [isNewGroup, setIsNewGroup] = useState(false);
     const [isGroupHighlight, setIsGroupHighlight] = useState(false);
     const [selectedKeys, setSelectedKeys] = useState([]);
+    const [ok, setOk] = useState(true);
 
     useEffect(() => {
         const savedNotes = JSON.parse(
@@ -77,12 +78,23 @@ const App = () => {
         setSelectedKeys(keys);
     };
 
+    const handleSelectBegin = (event) => {
+        if (event.target.id !== "main") {
+            setOk(false);
+        } else {
+            setOk(true);
+        }
+    };
+
     let stage = (
         <SelectableGroup
             onSelection={handleSelection}
             onEndSelection={() => setIsNewGroup(true)}
+            onBeginSelection={handleSelectBegin}
+            enabled={ok}
         >
             <Main
+                id="main"
                 notes={notes}
                 onDelete={handleDelete}
                 onEdit={handleEditNoteClick}
@@ -133,6 +145,7 @@ const App = () => {
             })
         );
         setIsNewGroup(false);
+        setOk(true);
     };
 
     return (

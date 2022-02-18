@@ -32,9 +32,10 @@ const Main = (props) => {
     });
 
     return (
-        <Droppable droppableId="main">
+        <Droppable droppableId="main" id="main">
             {(provided) => (
                 <div
+                    id="main"
                     className={styles.main}
                     {...provided.droppableProps}
                     ref={provided.innerRef}
